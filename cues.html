@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script
+    src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+  <a-scene renderer="colorManagement: true; physicallyCorrectLights: true;">
+    <a-assets>
+        <a-asset-item id="body" src="assets/circulatory_system/scene.gltf"></a-asset-item>
+        <a-asset-item id="kidney" src="assets/kidney/scene.gltf"></a-asset-item>
+        <a-asset-item id="cortisol" src="assets/cortisol_hormone_molecule/scene.gltf"></a-asset-item>
+        
+        <a-asset-item id="cortisol-obj" src="assets/Cortisol_OBJ/Cortisol_OBJ.obj"></a-asset-item>
+        <a-asset-item id="cortisol-mtl" src="assets/Cortisol_OBJ/Cortisol_OBJ.mtl"></a-asset-item>
+    </a-assets>
+
+    <!-- Main environment (forest) -->
+    <a-entity id="environment" environment="preset: contact"></a-entity>
+      
+    <a-entity gltf-model="#kidney" position="0 1.2 -2" scale="20 20 20" rotation="0 180 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 4000; easing: linear; loop: true"></a-entity>
+      
+    <a-entity gltf-model="#body" position="1.2 0 -2" scale="1 1 1" rotation="0 180 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:60; value: Cortisol Hormone Molecule (shown left) \n\nCortisol is produced in the adrenal glands that are located on top of your kidneys (shown center) and is released into your circulatory system (right) into your blood.\n\nCortisol is a survival mechanism to keep you safe in life-threatening situations, but chronic activation can take a toll on your health and wellbeing. Stress might even affect your body weight.\n\nSometimes stressors are easy to spot (like losing a job, dealing with traffic, or facial societal pressure and judgement). Other times, stressors (like lack of sleep or an unfulfilling relationship) are somewhat less obvious." position="0 2 -2.1" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity obj-model="obj: #cortisol-obj; mtl: #cortisol-mtl" position="-1.5 1 -1.85" scale=".1 .1 .1" rotation="0 90 0"></a-entity>
+
+    <!-- Rigged camera with cursor-->
+    <a-entity id="rig" position="0 0 0" movement-controls>
+      <a-entity id="head" camera look-controls position="0 1.6 0">
+        <a-entity
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+          cursor="fuse: false;" material="color: black; shader: flat" position="0 0 -3"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03">
+        </a-entity>
+      </a-entity>
+
+      <!-- Left Controller -->
+      <a-entity id="leftHand" hand-controls="hand: left"
+        teleport-controls="cameraRig: #rig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60"
+        visible="true"></a-entity>
+
+      <!-- Right Controller -->
+      <a-entity id="rightHand" hand-controls="hand: right" laser-controls
+        raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;"
+        line="color: #7cfc00; opacity: 0.5" visible="true"></a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
