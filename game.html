@@ -1,6 +1,7 @@
 <head>
     <title>A-Frame Super Shooter Kit - Basic</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="scripts/aframe-super-shooter-kit.min.js"></script>
     <script>
       /**
@@ -45,10 +46,12 @@
         target2 = document.getElementById('targetDorritos');
         target3 = document.getElementById('targetHeinekenBottle');
         target4 = document.getElementById('targetRedCan');
+        target5 = document.getElementById('targetCortisol');
         if (target1.object3D.visible === false 
           && target2.object3D.visible === false
           && target3.object3D.visible === false
           && target4.object3D.visible === false
+          && target5.object3D.visible === false
         ) {
           console.log('all enemies have been destoryed');
           document.querySelector('#camera').setAttribute('position', {x: 0, y: 0, z: 5});
@@ -68,28 +71,33 @@
             <a-asset-item id="dorritos" src="assets/dorritos/scene.gltf"></a-asset-item>
             <a-asset-item id="heinekenBottle" src="assets/heineken_bottle/scene.gltf"></a-asset-item>
             <a-asset-item id="redCan" src="assets/red_can/scene.gltf"></a-asset-item>
+            <a-asset-item id="cortisol-obj" src="assets/Cortisol_OBJ/Cortisol_OBJ.obj"></a-asset-item>
+            <a-asset-item id="cortisol-mtl" src="assets/Cortisol_OBJ/Cortisol_OBJ.mtl"></a-asset-item>
             <a-asset-item id="vpLogo" src="assets/vp_logo.glb"></a-asset-item>
         </assets>
 
-        <a-entity id="targetCupCake" gltf-model="#cupcake" position="-2 -0.3 -2" scale="0.003 0.003 0.003" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
-        <a-entity id="targetDorritos" gltf-model="#dorritos" position="-6 -0.3 1" scale="7.0 7.0 7.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
-        <a-entity id="targetHeinekenBottle" gltf-model="#heinekenBottle" position="9 -2 1" scale="5.0 5.0 5.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
-        <a-entity id="targetRedCan" gltf-model="#redCan" position="3 -0.3 -2" scale="0.2 0.2 0.2" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="environment" environment="preset: yavapai"></a-entity>
 
+        <!-- models -->
+        <a-entity id="targetCupCake" gltf-model="#cupcake" position="-5 1 -5" scale="0.01 0.01 0.01" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetDorritos" gltf-model="#dorritos" position="-11 2 3" scale="9 9 9" rotation="0 90 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetHeinekenBottle" gltf-model="#heinekenBottle" position="3 1 15" scale="7 7 7" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetRedCan" gltf-model="#redCan" position="3 1 -2" scale="0.4 0.4 0.4" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetCortisol" obj-model="obj: #cortisol-obj; mtl: #cortisol-mtl" position="-9 3 -3" scale=".3 .3 .3" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+
+        <!-- bullet -->
         <a-entity id="bulletTemplate" bullet geometry="primitive: sphere; radius: 0.1" material="color: orange"></a-entity>
 
-        <!-- <a-entity class="target" target="healthPoints: 100" geometry="primitive: box" material="color: teal" position="0 0 -4" hit-handler></a-entity> -->
+        <!-- logo -->
+        <a-entity id="entityVpLogo" gltf-model="#vpLogo" material="color: teal" position="0 3 -4" rotation="90 0 0" animation="property: rotation; from:90 75 0; to:90 -75 0; dur: 7000; easing: linear; loop: true; dir: alternate;"></a-entity>
 
-        <a-entity id="vpLogoEntity" gltf-model="#vpLogo" material="color: teal" position="0 3 -4" rotation="90 0 0" animation="property: rotation; from:90 75 0; to:90 -75 0; dur: 7000; easing: linear; loop: true; dir: alternate;"></a-entity>
-
-        <!-- <a-entity id="gun" shooter geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.3" material="color: red" click-to-shoot position="0 0 -1"></a-entity> -->
-
+        <!-- text -->
         <a-text id="welcome" position="0 2 -5" text="value: Welcome to VPAR; align: center;" scale="3 3 3" color="white" 
           animation="property: opacity; from: 1; to: 0; dur: 5000; easing: linear; loop: false;"></a-text>
         <a-text id="victory" position="0 2 -5" text="value: Victory over junk food; align: center;" scale="3 3 3" color="white" visible="false"></a-text>
 
-
-        <a-camera id="camera" position="0 0 5" shooter click-to-shoot></a-camera>
+        <!-- camera -->
+        <a-camera id="camera" position="0 3 5" shooter click-to-shoot></a-camera>
     </a-scene>
   </body>
   
