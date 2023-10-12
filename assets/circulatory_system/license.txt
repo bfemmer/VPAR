@@ -1,0 +1,11 @@
+Model Information:
+* title:	Circulatory System
+* source:	https://sketchfab.com/3d-models/circulatory-system-3584d5b2b97545cf965007c195899b7b
+* author:	brianj.seely (https://sketchfab.com/brianj.seely)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Circulatory System" (https://sketchfab.com/3d-models/circulatory-system-3584d5b2b97545cf965007c195899b7b) by brianj.seely (https://sketchfab.com/brianj.seely) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
