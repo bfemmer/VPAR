@@ -1,0 +1,11 @@
+Model Information:
+* title:	Doctor Strange ( Textured) (Rigged)
+* source:	https://sketchfab.com/3d-models/doctor-strange-textured-rigged-c6ed186eec494c2e8f435b2c4f341c1a
+* author:	CAPTAAINR (https://sketchfab.com/CAPTAAINR)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Doctor Strange ( Textured) (Rigged)" (https://sketchfab.com/3d-models/doctor-strange-textured-rigged-c6ed186eec494c2e8f435b2c4f341c1a) by CAPTAAINR (https://sketchfab.com/CAPTAAINR) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
