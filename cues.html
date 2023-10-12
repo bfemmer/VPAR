@@ -14,6 +14,7 @@
         <a-asset-item id="body" src="assets/circulatory_system/scene.gltf"></a-asset-item>
         <a-asset-item id="kidney" src="assets/kidney/scene.gltf"></a-asset-item>
         <a-asset-item id="thanos" src="assets/thanos/scene.gltf"></a-asset-item>
+        <img id="lessonsThumbnail" src="assets/lesson.png">
         
         <a-asset-item id="cortisol-obj" src="assets/Cortisol_OBJ/Cortisol_OBJ.obj"></a-asset-item>
         <a-asset-item id="cortisol-mtl" src="assets/Cortisol_OBJ/Cortisol_OBJ.mtl"></a-asset-item>
@@ -26,6 +27,7 @@
       
     <a-entity gltf-model="#body" position="1.2 0 -2" scale="1 1 1" rotation="0 180 0"></a-entity>
     <a-entity gltf-model="#thanos" position="-2.5 0 -2.6" scale="3.3 3.3 3.3" rotation="0 40 0"></a-entity>
+      <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="3.6 1 -3" rotation="0 -20 0" scale="0.65 0.65 0.65"></a-link>
       
     <a-entity text="width: 2; wrapCount:60; value: Cortisol Hormone Molecule (shown left) \n\nCortisol is produced in the adrenal glands that are located on top of your kidneys (shown center) and is released into your circulatory system (right) into your blood.\n\nCortisol is a survival mechanism to keep you safe in life-threatening situations, but chronic activation can take a toll on your health and wellbeing. Stress might even affect your body weight.\n\nSometimes stressors are easy to spot (like losing a job, dealing with traffic, facing societal pressure and judgement, or running into Thanos). Other times, stressors (like lack of sleep or an unfulfilling relationship) are somewhat less obvious." position="0 2 -2.1" scale="1 1 1" rotation="0 0 0"></a-entity>
     <a-entity obj-model="obj: #cortisol-obj; mtl: #cortisol-mtl" position="-1.5 1 -1.85" scale=".1 .1 .1" rotation="0 90 0"></a-entity>
@@ -33,6 +35,7 @@
     <!-- Rigged camera with cursor-->
     <a-entity id="rig" position="0 0 0" movement-controls>
       <a-entity id="head" camera look-controls position="0 1.6 0">
+<!--
         <a-entity
           animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
           animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
@@ -40,6 +43,7 @@
           cursor="fuse: false;" material="color: black; shader: flat" position="0 0 -3"
           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03">
         </a-entity>
+-->
       </a-entity>
 
       <!-- Left Controller -->

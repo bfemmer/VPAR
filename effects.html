@@ -15,17 +15,19 @@
         <a-asset-item id="candy" src="assets/chocolate_crunch_bar/scene.gltf"></a-asset-item>
         <a-asset-item id="beer" src="assets/heineken_bottle/scene.gltf"></a-asset-item>
         <a-asset-item id="fury" src="assets/fury/scene.gltf"></a-asset-item>
+        <img id="lessonsThumbnail" src="assets/lesson.png">
     </a-assets>
 
     <!-- Main environment (forest) -->
-    <a-entity id="environment" environment="preset: egypt; dressingAmount: 20"></a-entity>
+    <a-entity id="environment" environment="preset: egypt; dressingAmount: 20; lightPosition: 10 10 30"></a-entity>
       
     <a-entity gltf-model="#chips" position="-0.3 1.2 -2" scale="1 1 1" rotation="0 0 0"></a-entity>
     <a-entity gltf-model="#candy" position="0 1.2 -1.95" scale="0.2 0.2 0.2" rotation="0 -90 0"></a-entity>
     <a-entity gltf-model="#beer" position="0.5 1.2 -1.8" scale="0.07 0.07 0.07" rotation="0 90 0"></a-entity>
     <a-entity gltf-model="#fury" position="0 0 -2.5" scale="1 1 1" rotation="0 30 0"></a-entity>
+      <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="3.5 1 -3" rotation="0 -20 0" scale="0.65 0.65 0.65"></a-link>
       
-    <a-entity text="width: 4; wrapCount:80; value: Do you eat more, drink more alcohol, or make excuses to avoid exercise? Do you find that you're not acting like yourself?\n\nWell, MOTHER F....!!!\n\nYou're not alone. Stress can lead to behaviors that challenge success with weight management. Excess cortisol and other hormones can boost cravings for salty or sugary foods and alcohol like you see in front of me.\n\nEnter the next portal you see to continue your journey." position="0 2.4 -2.2" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity text="width: 4; wrapCount:60; value: Do you eat more, drink more alcohol, or make excuses to avoid exercise? Do you find that you're not acting like yourself?\n\nWell, MOTHER F....!!!\n\nYou're not alone. Stress can lead to behaviors that challenge success with weight management. Excess cortisol and other hormones can boost cravings for salty or sugary foods and alcohol like you see in front of me.\n\nEnter the next portal to continue your journey and learn how to reduce stress." position="0 2.4 -2.2" scale="1 1 1" rotation="0 0 0"></a-entity>
       
     <!-- Rigged camera with cursor-->
     <a-entity id="rig" position="0 0 0" movement-controls>
