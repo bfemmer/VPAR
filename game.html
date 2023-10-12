@@ -9,7 +9,22 @@
        */
       AFRAME.registerComponent('click-to-shoot', {
         init: function () {
-          document.body.addEventListener('mousedown', () => { this.el.emit('shoot'); });
+          document.body.addEventListener('mousedown', () => {
+            this.el.emit('shoot');
+            this.playSound();
+          });
+          document.body.addEventListener('triggerdown', (evt) => {
+              //var whichGun = evt.target.getAttribute("id");
+              evt.target.emit('shoot');
+              this.playSound();
+          });
+        },
+        playSound: function() {
+          // This is a generic way of playing sound in html5.
+          // I was having trouble with A-Frame sound by the time of this demo.
+          var shotElement = document.querySelector('#shot');
+          shotElement.pause();
+          shotElement.play();
         }
       });
   
@@ -74,6 +89,7 @@
             <a-asset-item id="cortisol-obj" src="assets/Cortisol_OBJ/Cortisol_OBJ.obj"></a-asset-item>
             <a-asset-item id="cortisol-mtl" src="assets/Cortisol_OBJ/Cortisol_OBJ.mtl"></a-asset-item>
             <a-asset-item id="vpLogo" src="assets/vp_logo.glb"></a-asset-item>
+            <audio id="shot" src="assets/pew.mp3" response-type="arraybuffer" preload="auto"></audio>
         </assets>
 
         <a-entity id="environment" environment="preset: yavapai"></a-entity>
