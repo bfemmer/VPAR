@@ -1,0 +1,11 @@
+Model Information:
+* title:	Heineken Bottle
+* source:	https://sketchfab.com/3d-models/heineken-bottle-75192ab29b1d4e0b8b1bfdca7c28ada8
+* author:	Bug All (https://sketchfab.com/liontrike)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Heineken Bottle" (https://sketchfab.com/3d-models/heineken-bottle-75192ab29b1d4e0b8b1bfdca7c28ada8) by Bug All (https://sketchfab.com/liontrike) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
