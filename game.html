@@ -125,6 +125,7 @@
                 <img id="floorNorm" src="assets/floor-norm.png">
                 <img id="targetBoard" src="assets/target.png">
                 <audio id="shot" src="assets/sounds/laser.ogg" response-type="arraybuffer" preload="auto"></audio>
+                <a-asset-item id="cupcake" src="assets/cupcake/scene.gltf"></a-asset-item>
             </a-assets>
 
             <a-sky src="#sky" radius="40" repeat="6 4"></a-sky>
@@ -157,6 +158,8 @@
             </a-entity>
 
             <a-entity id="bulletTemplate" bullet="speed: 25.0; poolSize: 12; " geometry="primitive: sphere; radius: 0.05" material="color: orange"></a-entity>
+
+            <a-entity gltf-model="#cupcake" position="2 1.2 -2" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
 
             <a-entity id="rig">
                 <!-- Camera based shooter is an option for desktop players, however more work is needed for gun like CS, which always shoot based on cross hair -->
