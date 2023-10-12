@@ -25,7 +25,8 @@
           color = new THREE.Color();
           color.set('#666');
           el.components.material.material.color.copy(color);
-          el.addEventListener('hit', () => {
+          el.addEventListener('hit', (evt) => {
+            console.log(evt.target.getAttribute("id"));
             color.addScalar(0.01);
             el.components.material.material.color.copy(color);
           });
@@ -44,10 +45,15 @@
     <a-scene background="color: #DADADA">
         <assets>
             <a-asset-item id="cupcake" src="assets/cupcake/scene.gltf"></a-asset-item>
+            <a-asset-item id="dorritos" src="assets/dorritos/scene.gltf"></a-asset-item>
+            <a-asset-item id="heinekenBottle" src="assets/heineken_bottle/scene.gltf"></a-asset-item>
             <a-asset-item id="redCan" src="assets/red_can/scene.gltf"></a-asset-item>
         </assets>
-        <a-entity gltf-model="#cupcake" position="-2 -0.3 -2" scale="0.003 0.003 0.003" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
-        <a-entity gltf-model="#redCan" position="3 -0.3 -2" scale="0.2 0.2 0.2" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+
+        <a-entity id="targetCupCake" gltf-model="#cupcake" position="-2 -0.3 -2" scale="0.003 0.003 0.003" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetDorritos" gltf-model="#dorritos" position="-6 -0.3 1" scale="3.0 3.0 3.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetHeinekenBottle" gltf-model="#heinekenBottle" position="6 -0.3 1" scale="3.0 3.0 3.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetRedCan" gltf-model="#redCan" position="3 -0.3 -2" scale="0.2 0.2 0.2" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
 
         <a-entity id="bulletTemplate" bullet geometry="primitive: sphere; radius: 0.1" material="color: orange"></a-entity>
 
