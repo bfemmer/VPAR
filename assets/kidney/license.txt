@@ -1,0 +1,11 @@
+Model Information:
+* title:	Medicine: Organ - The human kidney
+* source:	https://sketchfab.com/3d-models/medicine-organ-the-human-kidney-54bd93f545064617bbef79013efd2192
+* author:	Safiya (https://sketchfab.com/thepersonS)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Medicine: Organ - The human kidney" (https://sketchfab.com/3d-models/medicine-organ-the-human-kidney-54bd93f545064617bbef79013efd2192) by Safiya (https://sketchfab.com/thepersonS) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
