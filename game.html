@@ -60,7 +60,7 @@
 
         <a-entity class="target" target="healthPoints: 100" geometry="primitive: box" material="color: teal" position="0 0 -4" hit-handler></a-entity>
 
-        <a-entity id="vpLogoEntity" gltf-model="#vpLogo" material="color: teal" position="0 3 -4" rotation="90 0 0"></a-entity>
+        <a-entity id="vpLogoEntity" gltf-model="#vpLogo" material="color: teal" position="0 3 -4" rotation="90 0 0" animation="property: rotation; from:90 75 0; to:90 -75 0; dur: 7000; easing: linear; loop: true; dir: alternate;"></a-entity>
 
         <a-entity id="gun" shooter geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.3" material="color: red" click-to-shoot position="0 0 -1"></a-entity>
 
