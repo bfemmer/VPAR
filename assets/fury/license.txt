@@ -1,0 +1,11 @@
+Model Information:
+* title:	Samuel Jackson (Nick Fury) (Avengers)
+* source:	https://sketchfab.com/3d-models/samuel-jackson-nick-fury-avengers-ee71636a0d7549858110e1b847feb438
+* author:	David Wigforss (https://sketchfab.com/dwigfor)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Samuel Jackson (Nick Fury) (Avengers)" (https://sketchfab.com/3d-models/samuel-jackson-nick-fury-avengers-ee71636a0d7549858110e1b847feb438) by David Wigforss (https://sketchfab.com/dwigfor) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
