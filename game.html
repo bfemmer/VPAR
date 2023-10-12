@@ -52,17 +52,20 @@
         </assets>
 
         <a-entity id="targetCupCake" gltf-model="#cupcake" position="-2 -0.3 -2" scale="0.003 0.003 0.003" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
-        <a-entity id="targetDorritos" gltf-model="#dorritos" position="-6 -0.3 1" scale="3.0 3.0 3.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetDorritos" gltf-model="#dorritos" position="-6 -0.3 1" scale="7.0 7.0 7.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
         <a-entity id="targetHeinekenBottle" gltf-model="#heinekenBottle" position="6 -0.3 1" scale="3.0 3.0 3.0" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
         <a-entity id="targetRedCan" gltf-model="#redCan" position="3 -0.3 -2" scale="0.2 0.2 0.2" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
 
         <a-entity id="bulletTemplate" bullet geometry="primitive: sphere; radius: 0.1" material="color: orange"></a-entity>
 
-        <a-entity class="target" target="healthPoints: 100" geometry="primitive: box" material="color: teal" position="0 0 -4" hit-handler></a-entity>
+        <!-- <a-entity class="target" target="healthPoints: 100" geometry="primitive: box" material="color: teal" position="0 0 -4" hit-handler></a-entity> -->
 
         <a-entity id="vpLogoEntity" gltf-model="#vpLogo" material="color: teal" position="0 3 -4" rotation="90 0 0" animation="property: rotation; from:90 75 0; to:90 -75 0; dur: 7000; easing: linear; loop: true; dir: alternate;"></a-entity>
 
-        <a-entity id="gun" shooter geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.3" material="color: red" click-to-shoot position="0 0 -1"></a-entity>
+        <!-- <a-entity id="gun" shooter geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.3" material="color: red" click-to-shoot position="0 0 -1"></a-entity> -->
+        
+        <a-text id="welcome" position="0 2 -5" text="value: Welcome to VPAR; align: center;" scale="3 3 3" color="white" 
+          animation="property: opacity; from: 1; to: 0; dur: 5000; easing: linear; loop: false;"></a-text>
 
         <a-camera id="camera" position="0 0 5" shooter click-to-shoot></a-camera>
     </a-scene>
