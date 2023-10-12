@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   <script
     src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
@@ -11,24 +11,20 @@
 <body>
   <a-scene renderer="colorManagement: true; physicallyCorrectLights: true;">
     <a-assets>
-        <a-asset-item id="chips" src="assets/dorritos/scene.gltf"></a-asset-item>
-        <a-asset-item id="candy" src="assets/chocolate_crunch_bar/scene.gltf"></a-asset-item>
-        <a-asset-item id="beer" src="assets/heineken_bottle/scene.gltf"></a-asset-item>
+        <a-asset-item id="strange" src="assets/strange/scene.gltf"></a-asset-item>
     </a-assets>
 
     <!-- Main environment (forest) -->
-    <a-entity id="environment" environment="preset: forest; dressingAmount: 50"></a-entity>
+    <a-entity id="environment" environment="preset: arches; dressingAmount: 20"></a-entity>
       
-    <a-entity gltf-model="#chips" position="2 1.2 -2" scale="1 1 1" rotation="0 0 0"></a-entity>
-    <a-entity gltf-model="#candy" position="2.3 1.2 -1.95" scale="0.2 0.2 0.2" rotation="0 -90 0"></a-entity>
-    <a-entity gltf-model="#beer" rotation="0 90 0" position="2.8 1.2 -1.8" scale="0.07 0.07 0.07"></a-entity>
-      
-    <a-entity text="width: 6; wrapCount:80; value: Welcome to Virgin Pulse Transform Lesson 14: Calm Your Mind. This lesson will educate you on the signs of stress, the negative effects associated with chronic activation (espcially with regards to body weight), and ways to reduce stress. By the end of this lesson, you will have the tools necessary to calm your mind and reduce stress in order to get to a better and healthier you.\n\nClick on a teleportation link below to begin your journey." position="0 3.5 -2.1" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity text="width: 6; wrapCount:80; value: Welcome to Virgin Pulse Transform Lesson 14: Calm Your Mind. This lesson will educate you on the signs of stress, the negative effects associated with chronic activation (espcially with regards to body weight), and ways to reduce stress. By the end of this lesson, you will have the tools necessary to calm your mind and reduce stress in order to get to a better and healthier you.\n\nClick on one of Dr. Strange's teleportation portals below to begin your journey." position="0 3 -3" scale="1 1 1" rotation="0 0 0"></a-entity>
       
     <!-- Links -->
-    <a-link href="cues.html" title="See the Cues\nof Stress" position="-2.5 1 -2"></a-link>
-    <a-link href="effects.html" title="Recognize\nthe Effects" position="0 1 -2"></a-link>
-    <a-link href="game.html" title="Remove\nStressors" position="2.5 1 -2"></a-link>
+    <a-link href="cues.html" title="Learn the Signs\nof Stress" position="-2.5 1 -3" scale="0.75 0.75 0.75"></a-link>
+    <a-link href="effects.html" title="Recognize the\nEffects of Stress" position="0 1 -3" scale="0.75 0.75 0.75"></a-link>
+    <a-link href="game.html" title="Remove\nStressors" position="2.5 1 -3" scale="0.75 0.75 0.75"></a-link>
+      
+    <a-entity gltf-model="#strange" position="-4 0 -2.5" scale="2 3 3" rotation="0 40 0"></a-entity>
 
     <!-- Rigged camera with cursor-->
     <a-entity id="rig" position="0 0 0" movement-controls>
