@@ -15,7 +15,6 @@
         <a-asset-item id="kidney" src="assets/kidney/scene.gltf"></a-asset-item>
         <a-asset-item id="thanos" src="assets/thanos/scene.gltf"></a-asset-item>
         <img id="lessonsThumbnail" src="assets/lesson.png">
-        
         <a-asset-item id="cortisol-obj" src="assets/Cortisol_OBJ/Cortisol_OBJ.obj"></a-asset-item>
         <a-asset-item id="cortisol-mtl" src="assets/Cortisol_OBJ/Cortisol_OBJ.mtl"></a-asset-item>
     </a-assets>
@@ -30,8 +29,9 @@
       <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="3.6 1 -3" rotation="0 -20 0" scale="0.65 0.65 0.65"></a-link>
       
     <a-entity text="width: 2; wrapCount:70; value: Cortisol Hormone Molecule (shown left) \n\nCortisol is produced in the adrenal glands that are located on top of your kidneys (shown center) and is released into your circulatory system (right) into your blood.\n\nCortisol is a survival mechanism to keep you safe in life-threatening situations, but chronic activation can take a toll on your health and wellbeing. Stress might even affect your body weight.\n\nSometimes stressors are easy to spot (like losing a job, dealing with traffic, facing societal pressure and judgement, or seeing Thanos with his gauntlet containing all of the Infinity Stones). Other times, stressors (like lack of sleep or an unfulfilling relationship) are somewhat less obvious.\n\nUnlike Thanos, however, stress is not inevitable ... re-enter the portal to continue your journey to learn why." position="0 2 -2.1" scale="1 1 1" rotation="0 0 0"></a-entity>
+    
     <a-entity obj-model="obj: #cortisol-obj; mtl: #cortisol-mtl" position="-1.5 1 -1.85" scale=".1 .1 .1" rotation="0 90 0"></a-entity>
-
+      
     <!-- Rigged camera with cursor-->
     <a-entity id="rig" position="0 0 0" movement-controls>
       <a-entity id="head" camera look-controls position="0 1.6 0">
