@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script
+    src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+  <a-scene renderer="colorManagement: true; physicallyCorrectLights: true;">
+    <a-assets>
+        <a-asset-item id="ironman" src="assets/ironman/scene.gltf"></a-asset-item>
+        <img id="lessonsThumbnail" src="assets/lesson.png">
+    </a-assets>
+
+    <!-- Main environment (forest) -->
+    <a-entity id="environment" environment="preset: tron; dressingAmount: 20;"></a-entity>
+      
+    <a-entity gltf-model="#ironman" position="2 0 -2.5" scale="1 1 1" rotation="0 -50 0"></a-entity>
+      
+    <a-entity text="width: 4; wrapCount:60; value: Remove stressors when you can, and practice resilience when stressors are unavoidable. If you're looking for tips on how you can become more resilient, take a walk straight down the Path of Resilience towards the portal ... it will be a journey well spent." position="0 2.4 -2.2" scale="1 1 1" rotation="0 0 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Breathe. Take slow, deep breaths for 1 minute to lower your heart rate and blood pressure, and to help you feel calmer." position="-2 1.2 -4" scale="1 1 1" rotation="0 30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Reframe. How you think about a situation is what determines whether that situation will feel stressful to you. Challenge your thoughts." position="2 1.2 -5" scale="1 1 1" rotation="0 -30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Focus. Practice mindfulness. Focus on the present mmoment. Accept yourself and embrace your emotions without judgement." position="-2 1.2 -6" scale="1 1 1" rotation="0 30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Be grateful. Take a few moments every day to acknowledge the good." position="2 1.2 -7" scale="1 1 1" rotation="0 -30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Find joy. Play. Do what makes you cheerful!" position="-2 1.2 -8" scale="1 1 1" rotation="0 30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Be grateful. Take a few moments every day to acknowledge the good." position="2 1.2 -9" scale="1 1 1" rotation="0 -30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Move. Go for a walk, stretch or meditate (if you know how, great! ... if not, try it. It might change your life)." position="-2 1.2 -10" scale="1 1 1" rotation="0 30 0"></a-entity>
+      
+    <a-entity text="width: 2; wrapCount:40; value: Practice spirituality." position="2 1.2 -11" scale="1 1 1" rotation="0 -30 0"></a-entity>
+      
+    <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="0 1 -13" rotation="0 0 0" scale="0.65 0.65 0.65"></a-link>
+      
+    <!-- Rigged camera with cursor-->
+    <a-entity id="rig" position="0 0 0" movement-controls>
+      <a-entity id="head" camera look-controls position="0 1.6 0">
+        <a-entity
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+          cursor="fuse: false;" material="color: black; shader: flat" position="0 0 -3"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03">
+        </a-entity>
+      </a-entity>
+
+      <!-- Left Controller -->
+      <a-entity id="leftHand" hand-controls="hand: left"
+        teleport-controls="cameraRig: #rig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60"
+        visible="true"></a-entity>
+
+      <!-- Right Controller -->
+      <a-entity id="rightHand" hand-controls="hand: right" laser-controls
+        raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;"
+        line="color: #7cfc00; opacity: 0.5" visible="true"></a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
