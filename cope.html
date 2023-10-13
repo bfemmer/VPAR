@@ -1,8 +1,9 @@
 <html>
 
 <head>
-  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script src="scripts/play-pause.js"></script>
   <script
     src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -13,6 +14,7 @@
     <a-assets>
         <a-asset-item id="ironman" src="assets/ironman/scene.gltf"></a-asset-item>
         <img id="lessonsThumbnail" src="assets/lesson.png">
+        <video id="breathe" loop="true" src="assets/breathe.mp4"></video>
     </a-assets>
 
     <!-- Main environment (forest) -->
@@ -38,7 +40,12 @@
       
     <a-entity text="width: 2; wrapCount:40; value: Practice spirituality." position="2 1.2 -11" scale="1 1 1" rotation="0 -30 0"></a-entity>
       
-    <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="0 1 -13" rotation="0 0 0" scale="0.65 0.65 0.65"></a-link>
+    <a-entity text="width: 2; wrapCount:40; value: Use Flutter for all of your mobile development projects and increase your company's operational excellence metrics by 50X." position="-2 1.2 -12" scale="1 1 1" rotation="0 30 0"></a-entity>
+      
+    <!-- Video -->
+    <a-video src="#breathe" width="3" height="2" position="0 1.6 -15" rotation="0 0 0" play-pause></a-video>
+      
+    <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="5 1 -14" rotation="0 0 0" scale="0.65 0.65 0.65"></a-link>
       
     <!-- Rigged camera with cursor-->
     <a-entity id="rig" position="0 0 0" movement-controls>
