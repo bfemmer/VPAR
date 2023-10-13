@@ -1,0 +1,11 @@
+Model Information:
+* title:	Iron Man Mark-7(Subsurf)
+* source:	https://sketchfab.com/3d-models/iron-man-mark-7subsurf-a13c067e70814dc7b2ebc3f0ace10961
+* author:	benjamin.borromeo (https://sketchfab.com/benjamin.borromeo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Iron Man Mark-7(Subsurf)" (https://sketchfab.com/3d-models/iron-man-mark-7subsurf-a13c067e70814dc7b2ebc3f0ace10961) by benjamin.borromeo (https://sketchfab.com/benjamin.borromeo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
