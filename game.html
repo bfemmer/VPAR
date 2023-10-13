@@ -96,14 +96,14 @@
         <a-entity id="environment" environment="preset: yavapai"></a-entity>
 
         <!-- models -->
-        <a-entity id="targetCupCake" gltf-model="#cupcake" position="-5 1 -5" scale="0.01 0.01 0.01" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetCupCake" gltf-model="#cupcake" position="-7 1 -5" scale="0.01 0.01 0.01" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
         <a-entity id="targetDorritos" gltf-model="#dorritos" position="-11 2 3" scale="9 9 9" rotation="0 90 0" target="healthPoints: 3" hit-handler></a-entity>
         <a-entity id="targetHeinekenBottle" gltf-model="#heinekenBottle" position="3 1 15" scale="7 7 7" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
-        <a-entity id="targetRedCan" gltf-model="#redCan" position="3 1 -2" scale="0.4 0.4 0.4" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
+        <a-entity id="targetRedCan" gltf-model="#redCan" position="7 1 -2" scale="0.4 0.4 0.4" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
         <a-entity id="targetCortisol" obj-model="obj: #cortisol-obj; mtl: #cortisol-mtl" position="-9 3 -3" scale=".3 .3 .3" rotation="0 0 0" target="healthPoints: 3" hit-handler></a-entity>
         
         <!-- Portal back to main lesson page -->
-        <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="3.5 1 -3" rotation="0 -20 0" scale="0.65 0.65 0.65"></a-link>
+        <a-link href="lesson.html" title="Back to Dr. Strange" image="#lessonsThumbnail" position="4 1 -3" rotation="0 -20 0" scale="0.65 0.65 0.65"></a-link>
 
         <!-- bullet -->
         <a-entity id="bulletTemplate" bullet geometry="primitive: sphere; radius: 0.1" material="color: orange"></a-entity>
@@ -112,9 +112,9 @@
         <a-entity id="entityVpLogo" gltf-model="#vpLogo" material="color: teal" position="0 3 -4" rotation="90 0 0" animation="property: rotation; from:90 75 0; to:90 -75 0; dur: 7000; easing: linear; loop: true; dir: alternate;"></a-entity>
 
         <!-- text -->
-        <a-text id="welcome" position="0 2 -5" text="value: Welcome to VPAR; align: center;" scale="3 3 3" color="white" 
+        <a-text id="welcome" position="0 2 -5" text="value: Welcome to VPAR\nStress Reduction; align: center;" scale="3 3 3" color="white"
           animation="property: opacity; from: 1; to: 0; dur: 5000; easing: linear; loop: false;"></a-text>
-        <a-text id="victory" position="0 2 -5" text="value: Victory over junk food; align: center;" scale="3 3 3" color="white" visible="false"></a-text>
+        <a-text id="victory" position="0 2 -5" text="value: Hope you've enjoyed VPAR\nStress Reduction; align: center;" scale="3 3 3" color="white" visible="false"></a-text>
 
         <!-- camera -->
         <a-camera id="camera" position="0 3 5" shooter click-to-shoot></a-camera>
